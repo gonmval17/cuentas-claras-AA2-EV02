@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nueva Transacción</title>
+	<style> body { font-family: Arial; padding: 20px; } input, select { display: block; margin: 10px 0; padding: 8px; width: 200px; } </style>
+</head>
+<body>
+	<h1>➕ Nueva Transacción - Método POST</h1>
+	<a href="/transacciones">Volver al listado</a>
+	<hr>
+	<form action="/nueva" method="POST">
+		<label>Tipo:</label>
+		<select name="tipo" required>
+			<option value="Ingreso">Ingreso</option>
+			<option value="Gasto">Gasto</option>
+		</select>
+
+		<label>Descripción:</label>
+		<input type="text" name="descripcion" required placeholder="Ej: Salario">
+
+		<label>Valor:</label>
+		<input type="number" name="valor" required placeholder="Ej: 150000">
+
+		<button type="submit">Guardar Transacción</button>
+	</form>
+</body>
+</html>

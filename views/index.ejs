@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cuentas Claras - Listado</title>
+	<style> body { font-family: Arial; padding: 20px; } .ingreso { color: green; } .gasto { color: red; } </style>
+</head>
+<body>
+	<h1>💰 Cuentas Claras - AA2-EV02</h1>
+	<a href="/nueva">+ Nueva Transacción</a>
+	<hr>
+	<h2>Listado de Transacciones (GET)</h2>
+	<ul>
+		<% transacciones.forEach(t => { %>
+			<li class="<%= t.tipo === 'Ingreso' ? 'ingreso' : 'gasto' %>">
+				<strong><%= t.tipo %></strong> - <%= t.descripcion %> - $<%= t.valor %>
+			</li>
+		<% }) %>
+	</ul>
+</body>
+</html>
